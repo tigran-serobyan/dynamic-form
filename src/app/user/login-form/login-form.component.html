@@ -1,0 +1,42 @@
+<span class="top">
+       <img *ngIf="this.logo" [src]="this.logo" />
+       <h1 *ngIf="this.title">{{this.title}}</h1>
+</span>
+<form >
+
+       <app-dynamic-form [formInputs]="this.formInputs"
+                         (formDataChange)="onformDataChange($event)"
+                         (formDataValidate)="onformDataValidate($event)">
+
+       </app-dynamic-form>
+       <!-- <span *ngFor="let n of formInputs" [ngClass]="['input-span', n.width]">
+              <span class="error" *ngIf="errorData[n.field] && !errorData[n.field].isValid">
+                     {{errorData[n.field].errorMessage}}
+              </span>
+
+              <input 
+                     [title]="n.placeholder"
+                     [placeholder]="n.placeholder"
+                     [type]="n.type"
+                     (input)="getFormFieldChangeHandler($event, n)"
+                     [ngClass] = '{"valid": !errorData[n.field] || errorData[n.field].isValid}'/>
+
+       </span> -->
+
+       <span class="input-span">
+              <input [title]="this.button"
+                     [value]="this.button"
+                     [ngClass]="{'buttonDisabled': this.buttonDisabled, 'buttonEnabled': !this.buttonDisabled}"
+                     type="button"
+                     [disabled]="this.buttonDisabled"
+                     (click)="onLogin()"/>
+       </span>
+
+       <span *ngFor="let n of this.links" class="link-span">
+              <a [title]="n.text"
+                 [href]="n.url"
+                 class="link">
+                 {{n.text}}
+              </a>
+       </span>
+</form>

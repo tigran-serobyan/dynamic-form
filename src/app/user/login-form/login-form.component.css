@@ -1,0 +1,97 @@
+*{
+    font-family: sans-serif;
+}
+.top{
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+.input-span{
+    display: block;
+}
+.link-span{
+    display: inline-block;
+}
+input{
+    display: inline-block;
+    border: none;
+    border-bottom: solid 2px #cecece;
+    padding: 0px 10px 10px;
+    margin: 0px 5% 25px;
+    font-size: 20px;
+    color: #333;
+    transition: 0.3s;
+    width: 90%;
+    box-sizing: border-box;
+}
+input:hover{
+    border-color: #aaa;
+}
+input:focus{
+    outline: none;
+    border-color: #777;
+}
+.all{
+    width: 100%;
+    display: inline-block;
+}
+.half{
+    width: 47.5%;
+    display: inline-block;
+}
+.error{
+    color: red;
+}
+input[type = "button"]{
+    padding: 10px;
+    border-radius: 40px;
+    background-color: #66bb22;
+    border-color: #66bb22;
+    color: white;
+}
+.buttonEnabled:hover{
+    background-color: #66bb22;
+    border-color: #66bb22;
+    color: #333;
+}
+input[type = "button"]:focus{
+    background-color: #449900;
+    border-color: #449900;
+    color: #333;
+}
+.buttonDisabled:hover{
+    background-color: #66bb22;
+    border-color: #66bb22;
+}
+.wrong{
+    border-color: #dd3300;
+}
+.wrong:hover{
+    border-color: #cc2200;
+}
+.wrong:focus{
+    border-color: #aa1100;
+}
+.right{
+    border-color: #229900;
+}
+.right:hover{
+    border-color: #117700;
+}
+.right:focus{
+    border-color: #005500;
+}
+.link{
+    text-decoration: none;
+    color: #111;
+    transition: 0.5s;
+    display: inline-block;
+    margin: 15px;
+}
+.link:hover{
+    color: #333;
+    margin-left: 15px;
+    padding-left: 10px;
+    margin-right: 5px;
+}

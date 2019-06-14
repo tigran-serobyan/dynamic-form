@@ -1,0 +1,59 @@
+*{
+    text-align: center;
+    margin: 0px 35%;
+    color: #333;
+}
+.top{
+    border: solid 2px #cecece;
+    padding: 15px;
+    margin-bottom: 2%;
+}
+.top p{
+    margin: 0px 5px;
+    text-align: right;
+    font-size: 30px;
+    overflow: hidden;
+}
+.numbers{
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+.number{
+    display: inline-block;
+    width: 29%;
+    text-align: center;
+    background: #ececec;
+    padding: 2% 1%;
+    cursor: pointer;
+    margin: 0.5%;
+    font-size: 30px;
+}
+.number:hover{
+    background: #cecece;
+}
+.number:active{
+    background: #acacac;
+}
+.actions{
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 0.5%;
+}
+.action{
+    display: inline-block;
+    width: 29%;
+    text-align: center;
+    background: #ececec;
+    padding: 2% 1%;
+    cursor: pointer;
+    margin: 0.5%;
+    font-size: 30px;
+}
+.action:hover{
+    background: #cecece;
+}
+.action:active{
+    background: #acacac;
+}

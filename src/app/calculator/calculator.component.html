@@ -1,0 +1,17 @@
+<div class="top">
+  <p id="firstNumber">{{number1}}</p>
+  <p id="action">{{myaction}}</p>
+  <p id="secondNumber">{{number2}}</p>
+  <p id="result">{{result}}</p>
+</div>
+<div class="actions">
+  <div class="action" *ngFor="let n of actions" (click)="action(n)"> {{n.displayName}} </div>
+</div>
+<div class="numbers">
+  <div class="number" *ngFor="let n of numbers" (click)="number(n)">
+    {{n}}
+  </div>
+  <div class="number" (click)="number('delete')">
+    &larr;
+  </div>
+</div>

@@ -1,0 +1,127 @@
+<app-login-form
+    style="display: inline-block; width: 70%;"
+    title="Register" 
+    logo="" 
+    [formInputs]="[{
+        field: 'name',
+        type: 'text',
+        placeholder: 'Name',
+        rouls: [
+        {
+            validator: 'minLength',
+            value: 2,
+            errorMessage: 'This name is very short'
+        }
+        ],
+        width: 'half'
+    },{
+        field: 'surname',
+        type: 'text',
+        placeholder: 'Surname',
+        rouls: [
+        {
+            validator: 'minLength',
+            value: 2,
+            errorMessage: 'This surname is very short'
+        }
+        ],
+        width: 'half'
+    },
+    {
+        field: 'middelname',
+        type: 'text',
+        placeholder: 'Midlename',
+        rouls: [
+        {
+            validator: 'minLength',
+            value: 7,
+            errorMessage: 'This midlename is very short'
+        }
+        ],
+        width: 'all'
+    },{
+        field: 'username',
+        type: 'text',
+        placeholder: 'Username',
+        rouls: [
+        {
+            validator: 'minLength',
+            value: 2,
+            errorMessage: 'Username is very short'
+        }
+        ],
+        width: 'all'
+    },{
+        field: 'createPassword',
+        type: 'password',
+        placeholder: 'New password',
+        rouls: [
+        {
+            validator: 'minLength',
+            value: 8,
+            errorMessage: 'At least 8 sign'
+        },
+        {
+            validator: 'minNumberCount',
+            value: 1,
+            errorMessage: 'At least 1 number'
+        },
+        {
+            validator: 'minUppercaseCount',
+            value: 1,
+            errorMessage: 'At least 1 uppercase letter'
+        }
+        ],
+        width: 'half'
+    },{
+        field: 'confirmPassword',
+        type: 'password',
+        placeholder: 'Confirm password',
+        rouls: [
+        {
+            validator: 'confirm',
+            field: 'createPassword',
+            value: '',
+            errorMessage: 'Password is wrong'
+        },
+        {
+            validator: 'minLength',
+            value: 8,
+            errorMessage: 'Password is wrong'
+        },
+        {
+            validator: 'minNumberCount',
+            value: 1,
+            errorMessage: 'Password is wrong'
+        },
+        {
+            validator: 'minUppercaseCount',
+            value: 1,
+            errorMessage: 'Password is wrong'
+        }
+        ],
+        width: 'half'
+    },{
+        field: 'email',
+        component: 'password',
+        type: 'password',
+        placeholder: 'Email',
+        rouls: [
+        {
+            validator: 'email',
+            value: 2,
+            errorMessage: 'This email is invalid'
+        }
+        ],
+        width: 'all'
+    }]"
+    button="Log in"
+    [links]="[{
+        text: 'Register',
+        url: './register'
+      },{
+        text: 'Forget Password',
+        url: './forget-password'
+      }]"
+    (login) = "onLogin($event)">
+</app-login-form>

@@ -1,0 +1,20 @@
+<form>
+    <input class="half"
+           type="text"
+           placeholder="Name"
+           (input)="changeFormData($event, 'name')"
+           [ngClass]="{'right' : this.formData['name'] && this.formData['name'].length>=2, 'wrong': this.formData['name'] && 2 > this.formData['name'].length}" />
+    <input class="half" type="text" placeholder="Surame" (input)="changeFormData($event, 'surname')">
+    <input class="all" type="text" placeholder="Email" (input)="changeFormData($event, 'email')">
+    <input class="half" type="password" placeholder="Password" (input)="changeFormData($event, 'password')" id="password">
+    <div id="password-must">
+        <b>Password must contain</b>
+        <p id="password-must-length" class="password-not">At least 8 sign</p>
+        <p id="password-must-uppercase" class="password-not">A uppercase later</p>
+        <p id="password-must-lowercase" class="password-not">A lowercase later</p>
+        <p id="password-must-number" class="password-not">A number</p>
+    </div>
+    <input class="half" type="password" placeholder="Repeat password"
+        (input)="changeFormData($event, 'password-repeat')">
+    <input type="button" value="Register" (click)="onRegister()">
+</form>

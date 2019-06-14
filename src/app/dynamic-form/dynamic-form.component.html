@@ -1,0 +1,13 @@
+<span *ngFor="let n of formInputs" [ngClass]="['input-span', n.width]">
+        <span class="error" *ngIf="errorData[n.field] && !errorData[n.field].isValid">
+                {{errorData[n.field].errorMessage}}
+        </span>
+        <app-dynamic-input (FormFieldChangeHandler) = "FormFieldChangeHandler($event)" [inputInfo]="n"></app-dynamic-input>
+        <!-- <input 
+              [title]="n.placeholder"
+              [placeholder]="n.placeholder"
+              [type]="n.type"
+              (input)="getFormFieldChangeHandler($event, n)"
+              [ngClass] = '{"valid": !errorData[n.field] || errorData[n.field].isValid}'/> -->
+
+</span>

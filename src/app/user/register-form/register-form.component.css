@@ -1,0 +1,79 @@
+form{
+    width: 500px;
+}
+input{
+    display: block;
+    border: solid 2px #cecece;
+    padding: 7px;
+    margin: 1%;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #333;
+    transition: 0.5s;
+    box-sizing: border-box;
+    position: relative;
+}
+.half{
+    display: inline-block;
+    width: 48%; 
+}
+.all{
+    width: 98%;
+}
+input:hover{
+    border-color: #aaa;
+}
+input:focus{
+    outline: none;
+    border-color: #777;
+}
+input[type = "button"]{
+    background-color: #cecece;
+}
+input[type = "button"]:hover{
+    background: #aaa;
+}
+input[type = "button"]:focus{
+    background: #777;
+    color: white
+}
+.wrong{
+    border: solid 2px #dd0000;
+}
+.wrong:hover{
+    border: solid 2px #aa1100;
+}
+.wrong:focus{
+    border: solid 2px #991100;
+}
+.right{
+    border: solid 2px #119900;
+}
+.right:hover{
+    border: solid 2px #008800;
+}
+.right:focus{
+    border: solid 2px #007700;
+}
+#password-must{
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.9);
+    border: solid 2px #ececec;
+    border-radius: 5px;
+    padding: 10px 20px;
+    left: 1.5%;
+    display: none;
+}
+.password-not::before{
+    content: "✖";
+    padding-right: 5px; 
+    color: #dd1100;
+    font-weight: bold;
+}
+.password-is::before{
+    content: "✔";
+    padding-right: 5px; 
+    color: #119900;
+    font-weight: bold;
+}
